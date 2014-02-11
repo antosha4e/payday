@@ -3,9 +3,8 @@ package com.payday.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import com.payday.fragment.GamesFragment;
-import com.payday.fragment.MoviesFragment;
-import com.payday.fragment.TopRatedFragment;
+import com.payday.fragment.ContactsFragment;
+import com.payday.fragment.OrderFragment;
 
 /**
  * User: antosha
@@ -21,13 +20,13 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
         switch (index) {
             case 0:
                 // Top Rated fragment activity
-                return new TopRatedFragment();
+                return new OrderFragment();
             case 1:
                 // Games fragment activity
-                return new GamesFragment();
-            case 2:
-                // Movies fragment activity
-                return new MoviesFragment();
+                return new ContactsFragment();
+//            case 2:
+//                Movies fragment activity
+//                return new MoviesFragment();
         }
 
         return null;
@@ -35,6 +34,6 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 2;
     }
 }
