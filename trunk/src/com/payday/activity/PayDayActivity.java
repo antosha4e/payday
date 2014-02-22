@@ -2,16 +2,13 @@ package com.payday.activity;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.*;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
 import com.example.PayDay.R;
-import com.payday.adapter.OrderListAdapter;
+import com.payday.activity.old.MainActivity;
 import com.payday.adapter.TabsPagerAdapter;
 
 /**
@@ -33,7 +30,7 @@ public class PayDayActivity  extends FragmentActivity implements ActionBar.TabLi
         //Remove title bar
 //        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_activity);
 
         // Initilization
         viewPager = (ViewPager) findViewById(R.id.pager);
@@ -98,16 +95,22 @@ public class PayDayActivity  extends FragmentActivity implements ActionBar.TabLi
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
-//        switch (item.getItemId()) {
-//            case R.id.action_search:
-//                openSearch();
-//                return true;
+        switch (item.getItemId()) {
+            case R.id.action_add:
+                openAdd();
+                return true;
 //            case R.id.action_settings:
 //                openSettings();
 //                return true;
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-        return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+//        return true;
+    }
+
+    private void openAdd() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

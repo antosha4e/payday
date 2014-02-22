@@ -26,22 +26,12 @@ public class OrderListAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
         View rowView = inflater.inflate(R.layout.orders_list_item, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.textView);
         textView.setText(values[position]);
         TextView textView1 = (TextView) rowView.findViewById(R.id.textView1);
         textView1.setText(getSum());
-
-
-//        ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
-//        textView.setText(values[position]);
-////        Change the icon for Windows and iPhone
-//        String s = values[position];
-//        if (s.startsWith("iPhone")) {
-//            imageView.setImageResource(R.drawable.no);
-//        } else {
-//            imageView.setImageResource(R.drawable.ok);
-//        }
 
         return rowView;
     }
