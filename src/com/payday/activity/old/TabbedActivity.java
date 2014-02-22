@@ -1,4 +1,4 @@
-package com.payday.activity;
+package com.payday.activity.old;
 
 import android.app.ActionBar;
 import android.app.Activity;
