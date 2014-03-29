@@ -3,4 +3,5 @@
     <color name="lightblue">#1bbefa</color>
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
+    <color name="darkblue">@android:color/holo_blue_dark</color>
 </resources>

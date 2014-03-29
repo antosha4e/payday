@@ -109,7 +109,7 @@ public class PayDayActivity  extends FragmentActivity implements ActionBar.TabLi
     }
 
     private void openAdd() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, NewOrderActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }

@@ -16,16 +16,16 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+//        setContentView(R.layout.main);
 
-        final Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                dispatchTakePictureIntent();
-            }
-        });
+//        final Button button = (Button) findViewById(R.id.button);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                dispatchTakePictureIntent();
+//            }
+//        });
 
-        imageView = (ImageView) findViewById(R.id.imageView);
+//        imageView = (ImageView) findViewById(R.id.imageView);
     }
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
