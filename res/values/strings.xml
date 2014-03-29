@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">PayDay</string>
     <string name="action_add">Добавить</string>
+
+    <string name="new_order">Новый счет</string>
 </resources>
